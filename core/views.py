@@ -6,8 +6,7 @@ http_cabecera = """
 <ul>
 
 
-    <li><a href="/presentacion">Presntacion</a></li>
-
+    
 
 
 </ul>
