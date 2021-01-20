@@ -3,6 +3,7 @@ from django.shortcuts import render, HttpResponse
 
 http_cabecera = """
 <h1>Welcome</h1>
+<h1>FarmaPro</h1>
 <ul>
 
 <li><a href="/">home</a></li>
