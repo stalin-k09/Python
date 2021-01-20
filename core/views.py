@@ -5,8 +5,13 @@ http_cabecera = """
 <h1>Welcome</h1>
 <ul>
 
+<li><a href="/">home</a></li>
+ <li><a href="/presentacion">Presntacion</a></li>
+<li><a href="/presentacion">Presntacion</a></li>
+<li><a href="/contacto">Contacto</a></li>
+<li><a href="/catalogo">Catalogo</a></li>
 
-    
+
 
 
 </ul>
