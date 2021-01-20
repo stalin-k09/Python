@@ -17,6 +17,6 @@ from django.contrib import admin
 from django.urls import path
 
 urlpatterns = [
-    path('medicamentos/', views.medicamentos, name="medicamentos"),
+    path('presentacion/', views.presentacion, name='Presentacion'),
     path('admin/', admin.site.urls),
 ]
