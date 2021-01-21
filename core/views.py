@@ -1,8 +1,9 @@
 
 from django.shortcuts import render, HttpResponse
-#hola
+
 http_cabecera = """
 <h1>Welcome</h1>
+<h1>Proyecto Final</h1>
 <h1>FarmaPro</h1>
 <ul>
 
