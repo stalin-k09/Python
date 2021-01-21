@@ -5,6 +5,7 @@ http_cabecera = """
 <h1>Welcome</h1>
 <h1>Proyecto Final</h1>
 <h1>FarmaPro</h1>
+<h1>1</h1>
 <ul>
 
 <li><a href="/">home</a></li>
