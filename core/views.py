@@ -13,19 +13,22 @@ def medicinas(request):
 def clientes(request):
     return render(request,"core/clientes.html")
 
-def usuarios(request):
+def laboratorios(request):
     return render(request,"core/laboratorios.html")    
 
-def usuarios(request):
+def distribuidores(request):
     return render(request,"core/distribuidores.html")
 
 def usuarios(request):
-    return render(request,"core/compra.html")
+    return render(request,"core/usuarios.html")
 
-def usuarios(request):
-    return render(request,"core/venta.html")
+def ventas(request):
+    return render(request,"core/ventas.html")
 
-def usuarios(request):
+def login(request):
     return render(request,"core/login.html")
+
+def registro(request):
+    return render(request,"core/registro.html")
 
 

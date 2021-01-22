@@ -23,11 +23,11 @@ urlpatterns = [
     path('usuarios/', views.usuarios, name="usuarios"),
     path('medicinas/', views.medicinas, name="medicinas"),
     path('clientes/', views.clientes, name="clientes"),
-    path('clientes/', views.clientes, name="laboratorios"),
-    path('clientes/', views.clientes, name="distribuidores"),
-    path('clientes/', views.clientes, name="compras"),
-    path('clientes/', views.clientes, name="ventas"),
-    path('clientes/', views.clientes, name="login"),
+    path('laboratorios/', views.laboratorios, name="laboratorios"),
+    path('distribuidores/', views.distribuidores, name="distribuidores"),
+    path('ventas/', views.ventas, name="ventas"),
+    path('login/', views.login, name="login"),
+    path('registro/', views.registro, name="registro"),
 
 
 
