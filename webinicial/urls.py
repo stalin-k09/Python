@@ -17,14 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from core import views
 
+
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('presentacion/', views.presentacion, name='Presentacion'),
-    path('contacto/', views.contacto, name='Contacto'),
-    path('catalogo/', views.catalogo, name='Catalogo'),
+    path('', views.home, name="home"), #home/ ---> como no tiene nada se redicrecciona al home 
+    path('presentacion/', views.presentacion, name="presentacion"),
+    path('contacto/', views.contacto, name="contacto"),
+    path('catalogo/', views.catalogo, name="catalogo"),
     path('admin/', admin.site.urls),
-
-
-
-
 ]
