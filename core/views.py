@@ -2,6 +2,7 @@
 from django.shortcuts import render, HttpResponse
 
 http_cabecera = """
+<h1>ESTE ES UN COMETARIO RECÍEN AGREGADO 19:22</h1>
 <h1>Welcome</h1>
 <h1>Proyecto Final</h1>
 <h1>FarmaPro</h1>
