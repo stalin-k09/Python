@@ -79,22 +79,17 @@
                   <span>Clientes</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'clientes' %}">
+            <a class="nav-link" href="{% url 'laboratorios' %}">
                 <i class="fas fa-fw fa-table"></i>
                 <span>Laboratorios</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'clientes' %}">
+          <a class="nav-link" href="{% url 'distribuidores' %}">
               <i class="fas fa-fw fa-table"></i>
               <span>Distribuidores</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'clientes' %}">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Compras</span></a>
-    </li>
     <li class="nav-item">
-      <a class="nav-link" href="{% url 'clientes' %}">
+      <a class="nav-link" href="{% url 'ventas' %}">
           <i class="fas fa-fw fa-table"></i>
           <span>Ventas</span></a>
   </li>
@@ -694,7 +689,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="{% url 'login' %}">Logout</a>
                 </div>
             </div>
         </div>
