@@ -15,7 +15,7 @@ http_cabecera = """
 <li><a href="/contacto">Contacto</a></li>
 <li><a href="/catalogo">Catalogo</a></li>
 
-
+<h1>XD</h1>
 
 
 </ul>
