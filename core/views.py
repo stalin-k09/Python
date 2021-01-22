@@ -6,14 +6,14 @@ from django.shortcuts import render, HttpResponse
 
 def home(request):
     return render(request,"core/home.html")
+    
+def medicinas(request):
+    return render(request,"core/medicinas.html")
 
-def presentacion(request):
-    return render(request,"core/presentacion.html")
+def clientes(request):
+    return render(request,"core/clientes.html")
 
-def contacto(request):
-    return render(request,"core/contacto.html")
-
-def catalogo(request):
-    return render(request,"core/catalogo.html")    
+def usuarios(request):
+    return render(request,"core/usuarios.html")    
 
 

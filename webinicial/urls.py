@@ -20,8 +20,8 @@ from core import views
 
 urlpatterns = [
     path('', views.home, name="home"), #home/ ---> como no tiene nada se redicrecciona al home 
-    path('presentacion/', views.presentacion, name="presentacion"),
-    path('contacto/', views.contacto, name="contacto"),
-    path('catalogo/', views.catalogo, name="catalogo"),
+    path('usuarios/', views.usuarios, name="usuarios"),
+    path('medicinas/', views.medicinas, name="medicinas"),
+    path('clientes/', views.clientes, name="clientes"),
     path('admin/', admin.site.urls),
 ]
