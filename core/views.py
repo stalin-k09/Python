@@ -14,6 +14,18 @@ def clientes(request):
     return render(request,"core/clientes.html")
 
 def usuarios(request):
-    return render(request,"core/usuarios.html")    
+    return render(request,"core/laboratorios.html")    
+
+def usuarios(request):
+    return render(request,"core/distribuidores.html")
+
+def usuarios(request):
+    return render(request,"core/compra.html")
+
+def usuarios(request):
+    return render(request,"core/venta.html")
+
+def usuarios(request):
+    return render(request,"core/login.html")
 
 
