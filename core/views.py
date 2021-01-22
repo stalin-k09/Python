@@ -10,14 +10,15 @@ http_cabecera = """
 <ul>
 
 <li><a href="/">home</a></li>
- <li><a href="/presentacion">Presntacion</a></li>
-<li><a href="/presentacion">Presntacion</a></li>
+ <li><a href="/presentacion">Presentacion</a></li>
+<li><a href="/presentacion">Presentacion</a></li>
 <li><a href="/contacto">Contacto</a></li>
 <li><a href="/catalogo">Catalogo</a></li>
 
 
-<h1>hola </h1>
 
+<h1>hola </h1>
+<h2>Hola a todos</h2>
 </ul>
 """
 
