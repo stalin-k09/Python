@@ -1,35 +1,34 @@
-
 from django.shortcuts import render, HttpResponse
 
-http_cabecera = """
-<h1>Welcome</h1>
-<h1>Proyecto Final</h1>
-<h1>FarmaPro</h1>
-<h1>1</h1>
-<ul>
+#Crea tus vistas aqui
 
-<li><a href="/">home</a></li>
- <li><a href="/presentacion">Presntacion</a></li>
-<li><a href="/presentacion">Presntacion</a></li>
-<li><a href="/contacto">Contacto</a></li>
-<li><a href="/catalogo">Catalogo</a></li>
+#Crea tus vistas aqui
 
-
-<h1>hola </h1>
-
-</ul>
-"""
-
-
-# Create your views here.
 def home(request):
-    return HttpResponse (http_cabecera+"<h1>Mi primera libreria</h1")
+    return render(request,"core/home.html")
+    
+def medicinas(request):
+    return render(request,"core/medicinas.html")
 
-def presentacion(request):
-    return HttpResponse (http_cabecera+"<h1>Hola integrantes del grupo  Stalin Carmen Luis Olm Luis Gar Georgi</h1")
+def clientes(request):
+    return render(request,"core/clientes.html")
 
-def contacto(request):
-    return HttpResponse (http_cabecera+"<h1>somos 6 integrantes</h1")
+def laboratorios(request):
+    return render(request,"core/laboratorios.html")    
 
-def catalogo(request):
-    return HttpResponse (http_cabecera+"<h1>queremos pasar la materia</h1")
+def distribuidores(request):
+    return render(request,"core/distribuidores.html")
+
+def usuarios(request):
+    return render(request,"core/usuarios.html")
+
+def ventas(request):
+    return render(request,"core/ventas.html")
+
+def login(request):
+    return render(request,"core/login.html")
+
+def registro(request):
+    return render(request,"core/registro.html")
+
+
