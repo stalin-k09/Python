@@ -33,3 +33,7 @@ class Medicamento(models.Model):
     precio_venta = models.DecimalField (verbose_name="Precio de Venta")
     stock = models.CharField(max_length = 30, verbose_name="Stock")
     estado_cliente = models.CharField(max_length = 3, verbose_name="Estado")
+
+class Compra(models.Model):
+    cantidad_compra = models.IntegerField (verbose_name="Cantidad")
+    estado_compra = models.CharField(max_length = 3, verbose_name="Estado Pedido")
