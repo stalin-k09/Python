@@ -4,6 +4,6 @@ from django.shortcuts import render
 from .models import Medicamentos
 
 
-def medicina(request):
-    medicinas =Medicina.objects.all()
-    return render(request,"../medicamentos/medicamentos/medicamentos.html", {"medicinas":medicinas})
+# def medicina(request):
+#     medicinas =Medicina.objects.all()
+#     return render(request,"../medicamentos/medicamentos/medicamentos.html", {"medicinas":medicinas})
