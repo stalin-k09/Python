@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'laboratorios.apps.LaboratoriosConfig',
     'medicamentos.apps.MedicamentosConfig',
     'distribuidores.apps.DistribuidoresConfig',
-    
+    'clientes.apps.ClientesConfig',
 ]
 
 MIDDLEWARE = [
