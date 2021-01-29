@@ -4,6 +4,6 @@ from django.shortcuts import render
 from bdd.models import Distribuidor
 
 
-def distribuidor(request):
-    distribuidores =Distribuidor.objects.all()
-    return render(request,"../distribuidores/distribuidores/distribuidores.html", {"distribuidores":distribuidores})
+#def distribuidor(request):
+#   distribuidores =Distribuidor.objects.all()
+#    return render(request,"../distribuidores/distribuidores/distribuidores.html", {"distribuidores":distribuidores})
