@@ -19,7 +19,7 @@ from core import views as core_views
 
 #from distribuidores import views as distribuidores_views
 
-# from medicamentos import views as medicinas_views
+from medicamentos import views as medicamentos_views
 
 from . import settings 
 
@@ -29,14 +29,14 @@ urlpatterns = [
     path('medicinas/', core_views.medicinas, name="medicinas"),
     path('clientes/', core_views.clientes, name="clientes"),
     path('laboratorios/', core_views.laboratorios, name="laboratorios"),
-    path('distribuidores/', distribuidores_views.distribuidor, name="distribuidores"),
+    path('distribuidores/', core_views.distribuidores, name="distribuidores"),
     path('ventas/', core_views.ventas, name="ventas"),
     path('login/', core_views.login, name="login"),
     path('registro/', core_views.registro, name="registro"),
     path('admin/', admin.site.urls),
 
     
-    # path('medicamentos/', medicinas_views.medicamentos, name="medicamentos"),
+    path('medicamentos/', medicamentos_views.medicamentos, name="medicamentos"),
 
     
 ]
