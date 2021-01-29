@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'bdd.apps.BddConfig',
+    'medicamentos.apps.MedicamentosConfig',
     
 ]
 
