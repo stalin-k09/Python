@@ -16,8 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from core import views as core_views
-from medicamentos import views as medicinas_views
-from distribuidores import views as distribuidores_views
+
+#from distribuidores import views as distribuidores_views
+
+# from medicamentos import views as medicinas_views
+
 from . import settings 
 
 urlpatterns = [
@@ -31,6 +34,9 @@ urlpatterns = [
     path('login/', core_views.login, name="login"),
     path('registro/', core_views.registro, name="registro"),
     path('admin/', admin.site.urls),
-    path('medicamentos/', medicinas_views.Medicamentos, name="medicamentos"),
+
+    
+    # path('medicamentos/', medicinas_views.medicamentos, name="medicamentos"),
+
     
 ]
