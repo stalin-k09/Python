@@ -1,0 +1,42 @@
+<!--Heredar de plantilla Base-->
+{% extends 'core/base.html' %}
+
+<!--Llenar el bloque cabecera-->
+{% block cabecera %}
+LABORATORIOS
+{% endblock %}
+
+<!--Llenar el bloque pie-->
+{% block pie %}
+<table class="table table-hover">
+<thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Laboratorio</th>
+      <th scope="col">Dirección</th>
+      <th scope="col">Teléfono</th>
+      <th scope="col">Correo</th>     
+      <th scope="col">Registro</th>
+      <th scope="col">Autorización</th>
+    </tr>
+  </thead> 
+
+ 
+  
+    <tbody>
+        {% for laboratorio in laboratorios %}
+    <tr>
+        <th scope="row">#</th>
+        <td>{{laboratorio.nombre_laboratorio}}</td>
+        <td>{{laboratorio.direccion_laboratorio}}</td>
+        <td>{{laboratorio.telefono_laboratorio}}</td>
+        <td>{{laboratorio.correo_laboratorio}}</td>
+        <td>{{laboratorio.registro_laboratorio}}</td>
+        <td>{{laboratorio.autorizacion_laboratorio}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+    
+
+{% endblock %}
