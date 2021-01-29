@@ -1,13 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
-from .models import Medicina
-from .models import Distribuidor
-
-
-def medicina(request):
-    medicinas =Medicina.objects.all()
-    return render(request,"././medicamentos/medicamentos/medicamentos.html", {"medicinas":medicinas})
+from bdd.models import Distribuidor
 
 
 def distribuidor(request):
