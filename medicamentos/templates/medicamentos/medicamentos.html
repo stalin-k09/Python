@@ -1,0 +1,42 @@
+<!--Heredar de plantilla Base-->
+{% extends 'core/base.html' %}
+
+<!--Llenar el bloque cabecera-->
+{% block cabecera %}
+MEDICINAS
+{% endblock %}
+
+<!--Llenar el bloque pie-->
+{% block pie %}
+<table class="table table-hover">
+<thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">DCI</th>
+      <th scope="col">Forma Farmacéutica</th>
+      <th scope="col">Cantidad</th>     
+      <th scope="col">Precio Unidad</th>
+      <th scope="col">Fecha Expiración</th>
+    </tr>
+  </thead> 
+
+ 
+  
+    <tbody>
+        {% for medicina in medicinas %}
+    <tr>
+        <th scope="row">#</th>
+        <td>{{medicina.nombre_comercial}}</td>
+        <td>{{medicina.dci}}</td>
+        <td>{{medicina.forma_farmaceutica}}</td>
+        <td>{{medicina.cantidad_unidades}}</td>
+        <td>{{medicina.precio}}</td>
+        <td>{{medicina.fecha_expiracion}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+    
+
+{% endblock %}
