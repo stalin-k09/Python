@@ -11,6 +11,7 @@ from clientes import views as clientes_views
 
 from . import settings 
 
+
 urlpatterns = [
     path('', core_views.home, name="home"), #home/ ---> como no tiene nada se redicrecciona al home 
     path('usuarios/', core_views.usuarios, name="usuarios"),
