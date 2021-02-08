@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'medicamentos.apps.MedicamentosConfig',
     'distribuidores.apps.DistribuidoresConfig',
     'clientes.apps.ClientesConfig',
+    'compras.apps.ComprasConfig',
 ]
 
 MIDDLEWARE = [
