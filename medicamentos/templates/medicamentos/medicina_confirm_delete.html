@@ -1,0 +1,27 @@
+<!--Heredar de la plantilla base--> {% extends 'core/base.html' %}
+
+<!--Llenar el bloque cabecera-->
+{% block cabecera %} Contacto {% endblock %}
+
+<!--Llenar el bloque pie-->
+{% block pie %} {% include 'medicamentos/medicina_menu.html'%}
+
+<main role="main">
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col-md-9 mx-auto">
+        <div>
+          <form action="" method="post">
+            {% csrf_token %}
+            <p>¿Estás seguro de que quieres borrar "{{ object }}"?</p>
+            <input type="submit" value="Sí, borrar la página" />
+            <input href="{% url 'medicamentos:medicamentos' %}" type="submit" value="No, borrar luego" />
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

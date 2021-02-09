@@ -8,7 +8,7 @@ Medicinas
 
 <!--Llenar el bloque pie-->
 {% block pie %}
-{% include 'medicamentos/medicamento_menu.html'%}
+{% include 'medicamentos/medicina_menu.html'%}
 <div class="card shadow mb-4">
   <div class="card-header py-3">
       <h6 class="m-0 font-weight-bold text-primary">Medicamentos Disponibles en Farmacia</h6>
@@ -18,7 +18,6 @@ Medicinas
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 <thead>
     <tr>
-      <th scope="col">#</th>
       <th scope="col">Nombre</th>
       <th scope="col">DCI</th>
       <th scope="col">Forma Farmacéutica</th>
@@ -31,9 +30,8 @@ Medicinas
   </thead> 
   
     <tbody>
-        {% for medicina in medicinas %}
+        {% for medicina in object_list %}
     <tr>
-        <th scope="row">#</th>
         <td>{{medicina.nombre_comercial}}</td>
         <td>{{medicina.dci}}</td>
         <td>{{medicina.forma_farmaceutica}}</td>
@@ -41,8 +39,8 @@ Medicinas
         <td>{{medicina.precio}}</td>
         <td>{{medicina.fecha_expiracion}}</td>
         <td>
-          <a href="#" class="btn btn-primary">Editar</a>
-          <a href="#" class="btn btn-primary">Borrar</a>
+          <a href="{% url 'medicamentos:update' medicina.id %}" class="btn btn-primary">Editar</a>
+          <a href="{% url 'medicamentos:delete' medicina.id %}" class="btn btn-primary">Borrar</a>
         </td>
     </tr>
     {% endfor %}
