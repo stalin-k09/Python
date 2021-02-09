@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import Venta
+from .models import Pedido
 # Register your models here.
 
-class VentaAdmin(admin.ModelAdmin):
+class PedidoAdmin(admin.ModelAdmin):
     readonly_fields = ["created","updated"]
-admin.site.register(Venta, VentaAdmin)
+admin.site.register(Pedido, PedidoAdmin)

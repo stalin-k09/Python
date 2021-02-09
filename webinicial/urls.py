@@ -9,7 +9,7 @@ from laboratorios import views as laboratorios_views
 from distribuidores import views as distribuidores_views
 from clientes import views as clientes_views
 from compras import views as compras_views
-from ventas import views as ventas_views
+from pedidos import views as pedidos_views
 from . import settings 
 
 
@@ -27,5 +27,5 @@ urlpatterns = [
     path('medicamentos/', medicamentos_views.medicamentos, name="medicamentos"),
     path('laboratorios/', laboratorios_views.laboratorios, name="laboratorios"),
     path('compras/', compras_views.compras, name="compras"),
-    path('ventas/', ventas_views.ventas, name="ventas"),
+    path('pedidos/', pedidos_views.pedidos, name="pedidos"),
 ]
