@@ -1,7 +1,7 @@
 <!--Heredar de la plantilla base--> {% extends 'core/base.html' %}
 
 <!--Llenar el bloque cabecera-->
-{% block cabecera %} Eliminar Venta {% endblock %}
+{% block cabecera %} Eliminar Salida {% endblock %}
 
 <!--Llenar el bloque pie-->
 {% block pie %} {% include 'salidas/salida_menu.html'%}
@@ -15,7 +15,7 @@
         <div>
           <form action="" method="post">
             {% csrf_token %}
-            <p>¿Estás seguro de que quieres borrar "{{ object.medicamento }}"?</p>
+            <p>¿Estás seguro de que quieres borrar "{{ object.nombre_medicamento }}"?</p>
             <input type="submit" value="Borrar Registro" class="btn-sm btn-danger"/>
           </form>
         </div>

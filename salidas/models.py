@@ -9,6 +9,7 @@ class Salida(models.Model):
     created = models.DateTimeField(auto_now_add = True)
     #claves foraneas
     medicamento = models.ForeignKey(Medicina, on_delete = models.CASCADE, verbose_name="Medicamento")
+
     cliente = models.ForeignKey(Cliente, on_delete = models.CASCADE, verbose_name="Cliente")
     
     cantidad_venta = models.IntegerField (verbose_name="Cantidad")

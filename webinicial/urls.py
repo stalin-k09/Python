@@ -17,6 +17,7 @@ from clientes.urls import pathClientes
 
 from distribuidores.urls import pathDistribuidores
 from salidas.urls import pathSalidas
+from compras.urls import pathCompras
 
 
 urlpatterns = [
@@ -26,7 +27,6 @@ urlpatterns = [
     path('login/', core_views.login, name="login"),
     path('registro/', core_views.registro, name="registro"),
     path('admin/', admin.site.urls),
-    path('compras/', compras_views.compras, name="compras"),
 
 
     path("distribuidores/", include(pathDistribuidores)),
@@ -35,4 +35,5 @@ urlpatterns = [
     path("laboratorios/", include(pathLaboratorios)),
     path("clientes/", include(pathClientes)),
     path("salidas/", include(pathSalidas)),
+    path("compras/", include(pathCompras)),
 ]

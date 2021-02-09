@@ -1,10 +1,10 @@
 <!--Heredar de la plantilla base--> {% extends 'core/base.html' %}
 
 <!--Llenar el bloque cabecera-->
-{% block cabecera %} Actualizar Venta {% endblock %}
+{% block cabecera %} Actualizar Compra {% endblock %}
 
 <!--Llenar el bloque pie-->
-{% block pie %} {% include 'salidas/salida_menu.html'%}
+{% block pie %} {% include 'compras/compra_menu.html'%}
 
 <main role="main">
   <div class="container">
@@ -14,7 +14,7 @@
           {% if 'ok' in request.GET %}
           <p style="color: green" class="alert alert-success" role="alert">
             Registro editado correctamente
-            <a href="{% url 'salidas:salidas' %}"
+            <a href="{% url 'compras:compras' %}"
               >Volver</a>
           </p>
           {% endif %}
