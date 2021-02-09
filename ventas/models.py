@@ -1,6 +1,6 @@
 from django.db import models
-#from clientes.models import Cliente
-#from medicamentos.models import Medicina
+from clientes.models import Cliente
+from medicamentos.models import Medicina
 # Create your models here.
 
 class Venta(models.Model):
@@ -11,9 +11,9 @@ class Venta(models.Model):
     updated = models.DateTimeField(auto_now = True)
     #claves foraneas
     
-    #nombre_cliente = models.ForeignKey(Cliente, on_delete = models.CASCADE, verbose_name = "Nombre")
+    nombre_cliente = models.ForeignKey(Cliente, on_delete = models.CASCADE, verbose_name = "Nombre")
     #apellido_cliente = models.ForeignKey(Cliente, on_delete = models.CASCADE, verbose_name = "Apellido")
-    #nombre_comercial = models.ForeignKey(Medicina, on_delete = models.CASCADE, verbose_name="Nombre Medicamento")
+    nombre_comercial = models.ForeignKey(Medicina, on_delete = models.CASCADE, verbose_name="Nombre Medicamento")
     #precio = models.ForeignKey(Medicina,on_delete = models.CASCADE, verbose_name="Precio Venta")
 
 
