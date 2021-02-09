@@ -7,10 +7,8 @@ class Cliente(models.Model):
     apellido_cliente = models.CharField(max_length = 50, verbose_name="Apellido")
     direccion_cliente = models.CharField(max_length = 50, verbose_name="Dirección")
     ciudad_cliente = models.CharField(max_length = 20, verbose_name="Ciudad")
-    #provincia_cliente = models.CharField(max_length = 50, verbose_name="Provincia")
     telefono_cliente = models.CharField(max_length = 10,verbose_name="teléfono")
-    correo_cliente = models.CharField(max_length = 50, verbose_name="Correo")
-    #fechanac_cliente = models.DateTimeField(verbose_name="Fecha de Nacimiento")
+    correo_cliente = models.EmailField(max_length = 50, verbose_name="Correo")
     created = models.DateTimeField(auto_now_add = True)
     updated = models.DateTimeField(auto_now = True)
 
