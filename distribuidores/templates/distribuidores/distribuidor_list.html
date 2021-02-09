@@ -8,7 +8,7 @@ Distribuidores
 
 <!--Llenar el bloque pie-->
 {% block pie %}
-{% include 'medicamentos/distribuidor_menu.html'%}
+{% include 'distribuidores/distribuidor_menu.html'%}
 <div class="card shadow mb-4">
   <div class="card-header py-3">
       <h6 class="m-0 font-weight-bold text-primary">Lista de Distribuidores de FARMAPRO</h6>
@@ -29,7 +29,7 @@ Distribuidores
   </thead> 
   
     <tbody>
-        {% for distribuidor in distribuidores %}
+      {% for distribuidor in object_list %}
     <tr>
       <th scope="row">#</th>
       <td>{{distribuidor.nombre_distribuidor}}</td>
@@ -39,8 +39,8 @@ Distribuidores
       <td>{{distribuidor.telefono_distribuidor}}</td>
       <td>{{distribuidor.correo_distribuidor}}</td>
         <td>
-          <a href="#" class="btn btn-primary">Editar</a>
-          <a href="#" class="btn btn-primary">Borrar</a>
+          <a href="{% url 'distribuidores:update' distribuidor.id %}" class="btn btn-primary">Editar</a>
+          <a href="{% url 'distribuidores:delete' distribuidor.id %}" class="btn btn-primary">Borrar</a>
         </td>
     </tr>
     {% endfor %}
