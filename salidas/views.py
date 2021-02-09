@@ -27,4 +27,3 @@ class SalidaUpdateView(UpdateView):
 class SalidaDeleteView(DeleteView):
     model = Salida
     success_url = reverse_lazy("salidas:salidas")
-
