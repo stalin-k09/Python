@@ -28,13 +28,13 @@ class MedicinaListView(ListView):
 
 class MedicinaCreateView(CreateView):
     model = Medicina
-    fields = ["nombre_comercial", "dci", "forma_farmaceutica","cantidad_unidades","precio","fecha_expiracion"]
+    fields = ["nombre_comercial", "dci", "forma_farmaceutica","laboratorio","cantidad_unidades","precio","fecha_expiracion"]
     success_url = reverse_lazy("medicamentos:medicamentos")
 
 
 class MedicinaUpdateView(UpdateView):
     model = Medicina
-    fields = ["nombre_comercial", "dci", "forma_farmaceutica","cantidad_unidades","precio","fecha_expiracion"]
+    fields = ["nombre_comercial", "dci", "forma_farmaceutica","laboratorio","cantidad_unidades","precio","fecha_expiracion"]
     template_name_suffix = "_update_form"
 
     def get_success_url(self):
@@ -44,10 +44,3 @@ class MedicinaUpdateView(UpdateView):
 class MedicinaDeleteView(DeleteView):
     model = Medicina
     success_url = reverse_lazy("medicamentos:medicamentos")
-
-    from django.views.defaults import page_not_found
- 
-def mi_error_404(request):
-    templates = '404.html'
- 
-    return page_not_found(request, templates=templates)

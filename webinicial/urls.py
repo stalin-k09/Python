@@ -12,6 +12,7 @@ from compras import views as compras_views
 
 from . import settings 
 from medicamentos.urls import pathMedicinas
+from laboratorios.urls import pathLaboratorios
 
 urlpatterns = [
     path('', core_views.home, name="home"), #home/ ---> como no tiene nada se redicrecciona al home 
@@ -23,9 +24,8 @@ urlpatterns = [
     path('registro/', core_views.registro, name="registro"),
     path('admin/', admin.site.urls),
     path('clientes/', clientes_views.clientes, name="clientes"),
-    # path('medicamentos/', medicamentos_views.medicamentos, name="medicamentos"),
-    path('laboratorios/', laboratorios_views.laboratorios, name="laboratorios"),
     path('compras/', compras_views.compras, name="compras"),
 
     path("medicamentos/", include(pathMedicinas)),
+    path("laboratorios/", include(pathLaboratorios)),
 ]

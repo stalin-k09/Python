@@ -1,10 +1,10 @@
 <!--Heredar de la plantilla base--> {% extends 'core/base.html' %}
 
 <!--Llenar el bloque cabecera-->
-{% block cabecera %} Actualizar Medicamento {% endblock %}
+{% block cabecera %} Actualizar Laboratorio {% endblock %}
 
 <!--Llenar el bloque pie-->
-{% block pie %} {% include 'medicamentos/medicina_menu.html'%}
+{% block pie %} {% include 'laboratorios/laboratorio_menu.html'%}
 
 <main role="main">
   <div class="container">
@@ -14,7 +14,7 @@
           {% if 'ok' in request.GET %}
           <p style="color: green" class="alert alert-success" role="alert">
             Registro editado correctamente
-            <a href="{% url 'medicamentos:medicamentos' %}"
+            <a href="{% url 'laboratorios:laboratorios' %}"
               >Volver</a>
           </p>
           {% endif %}
@@ -24,7 +24,7 @@
               {{ form.as_table }}
             </table>
             <br />
-            <input type="submit" value="Actualizar"  class="btn btn-success" />
+            <input type="submit" value="Actualizar" c class="btn btn-success"/>
           </form>
         </div>
       </div>
