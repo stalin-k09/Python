@@ -13,7 +13,7 @@ http_cabecera = """
  <li><a href="/presentacion">Presentacion</a></li>
 <li><a href="/presentacion">Presentacion</a></li>
 <li><a href="/contacto">Contacto</a></li>
-<li><a href="/catalogo">Catalogo</a></li>
+<li><a href="/catalogo">Catalogo1</a></li>
 
 
 
