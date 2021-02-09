@@ -3,19 +3,19 @@
 
 <!--Llenar el bloque cabecera-->
 {% block cabecera %}
-DISTRIBUIDORES
+Distribuidores
 {% endblock %}
 
 <!--Llenar el bloque pie-->
 {% block pie %}
-{% include 'distribuidores/distribuidor_menu.html'%}
+{% include 'medicamentos/distribuidor_menu.html'%}
 <div class="card shadow mb-4">
   <div class="card-header py-3">
       <h6 class="m-0 font-weight-bold text-primary">Lista de Distribuidores de FARMAPRO</h6>
   </div>
       <div class="table-responsive">
         
-<table class="table table-bordered" align = 'Center' id="dataTable" width="100%" cellspacing="0">
+<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 <thead>
     <tr>
       <th scope="col">#</th>
@@ -25,32 +25,28 @@ DISTRIBUIDORES
       <th scope="col">Ciudad</th>     
       <th scope="col">Teléfono</th>
       <th scope="col">Correo</th>
-      <th scope="col">Acciones</th>
     </tr>
   </thead> 
-
- 
   
     <tbody>
         {% for distribuidor in distribuidores %}
     <tr>
-        <th scope="row">#</th>
-        <td>{{distribuidor.nombre_distribuidor}}</td>
-        <td>{{distribuidor.ruc_distribuidor}}</td>
-        <td>{{distribuidor.direccion_distribuidor}}</td>
-        <td>{{distribuidor.ciudad_distribuidor}}</td>
-        <td>{{distribuidor.telefono_distribuidor}}</td>
-        <td>{{distribuidor.correo_distribuidor}}</td>
-        
+      <th scope="row">#</th>
+      <td>{{distribuidor.nombre_distribuidor}}</td>
+      <td>{{distribuidor.ruc_distribuidor}}</td>
+      <td>{{distribuidor.direccion_distribuidor}}</td>
+      <td>{{distribuidor.ciudad_distribuidor}}</td>
+      <td>{{distribuidor.telefono_distribuidor}}</td>
+      <td>{{distribuidor.correo_distribuidor}}</td>
         <td>
-        <a href="#" class="btn btn-primary">Editar</a>
-        <a href="#" class="btn btn-primary">Borrar</a>
+          <a href="#" class="btn btn-primary">Editar</a>
+          <a href="#" class="btn btn-primary">Borrar</a>
         </td>
     </tr>
     {% endfor %}
     
     </tbody>
-
+    
 </table>
 
 {% endblock %}
