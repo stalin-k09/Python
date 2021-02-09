@@ -1,0 +1,52 @@
+<!--Heredar de plantilla Base-->
+{% extends 'core/base.html' %}
+
+<!--Llenar el bloque cabecera-->
+{% block cabecera %}
+Medicinas
+{% endblock %}
+
+<!--Llenar el bloque pie-->
+{% block pie %}
+{% include 'medicamentos/medicina_menu.html'%}
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary">Medicamentos Disponibles en Farmacia</h6>
+  </div>
+      <div class="table-responsive">
+        
+<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+<thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Forma Farmacéutica</th>
+      <th scope="col">Laboratorio</th>
+      <th scope="col">Cantidad</th>   
+      <th scope="col">Precio Unidad</th>
+      <th scope="col">Fecha Expiración</th>
+      <th scope="col">Acciones</th>
+      
+    </tr>
+  </thead> 
+  
+    <tbody>
+        {% for medicina in object_list %}
+    <tr>
+        <td>{{medicina.nombre_comercial}}</td>
+        <td>{{medicina.forma_farmaceutica}}</td>
+        <td>{{medicina.laboratorio}}</td>
+        <td>{{medicina.cantidad_unidades}}</td>
+        <td>{{medicina.precio}}</td>
+        <td>{{medicina.fecha_expiracion}}</td>
+        <td>
+          <a href="{% url 'medicamentos:update' medicina.id %}" class="btn btn-sm btn-primary">Editar</a>
+          <a href="{% url 'medicamentos:delete' medicina.id %}" class="btn btn-secondary btn-sm">Borrar</a>
+        </td>
+    </tr>
+    {% endfor %}
+    
+    </tbody>
+    
+</table>
+
+{% endblock %}

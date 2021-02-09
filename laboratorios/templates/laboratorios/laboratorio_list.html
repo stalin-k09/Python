@@ -1,0 +1,48 @@
+<!--Heredar de plantilla Base-->
+{% extends 'core/base.html' %}
+
+<!--Llenar el bloque cabecera-->
+{% block cabecera %}
+Laboratorios
+{% endblock %}
+
+<!--Llenar el bloque pie-->
+{% block pie %}
+{% include 'laboratorios/laboratorio_menu.html'%}
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary">Laboratorios Registrados</h6>
+  </div>
+      <div class="table-responsive">
+        
+<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+<thead>
+    <tr>
+        <th scope="col">Laboratorio</th>
+        <th scope="col">Dirección</th>
+        <th scope="col">Teléfono</th>
+        <th scope="col">Correo</th>  
+        <th scope="col">Acciones</th>
+      
+    </tr>
+  </thead> 
+  
+    <tbody>
+        {% for laboratorio in object_list %}
+    <tr>
+        <td>{{laboratorio.nombre_laboratorio}}</td>
+        <td>{{laboratorio.direccion_laboratorio}}</td>
+        <td>{{laboratorio.telefono_laboratorio}}</td>
+        <td>{{laboratorio.correo_laboratorio}}</td>
+        <td>
+          <a href="{% url 'laboratorios:update' laboratorio.id %}" class="btn btn-sm btn-primary">Editar</a>
+          <a href="{% url 'laboratorios:delete' laboratorio.id %}" class="btn btn-secondary btn-sm">Borrar</a>
+        </td>
+    </tr>
+    {% endfor %}
+    
+    </tbody>
+    
+</table>
+
+{% endblock %}
