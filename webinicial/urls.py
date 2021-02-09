@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from core import views as core_views
 
 #from distribuidores import views as distribuidores_views
@@ -9,14 +9,14 @@ from laboratorios import views as laboratorios_views
 from distribuidores import views as distribuidores_views
 from clientes import views as clientes_views
 from compras import views as compras_views
-from pedidos import views as pedidos_views
-from . import settings 
 
+from . import settings 
+from medicamentos.urls import pathMedicinas
+from laboratorios.urls import pathLaboratorios
 
 urlpatterns = [
     path('', core_views.home, name="home"), #home/ ---> como no tiene nada se redicrecciona al home 
     path('usuarios/', core_views.usuarios, name="usuarios"),
-    path('medicinas/', core_views.medicinas, name="medicinas"),
     #path('clientes/', core_views.clientes, name="clientes"),
     path('distribuidores/', distribuidores_views.distribuidores, name="distribuidores"),
     #path('ventas/', core_views.ventas, name="ventas"),
@@ -24,8 +24,8 @@ urlpatterns = [
     path('registro/', core_views.registro, name="registro"),
     path('admin/', admin.site.urls),
     path('clientes/', clientes_views.clientes, name="clientes"),
-    path('medicamentos/', medicamentos_views.medicamentos, name="medicamentos"),
-    path('laboratorios/', laboratorios_views.laboratorios, name="laboratorios"),
     path('compras/', compras_views.compras, name="compras"),
-    path('pedidos/', pedidos_views.pedidos, name="pedidos"),
+
+    path("medicamentos/", include(pathMedicinas)),
+    path("laboratorios/", include(pathLaboratorios)),
 ]

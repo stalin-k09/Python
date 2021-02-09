@@ -68,7 +68,7 @@
 
             <!-- Nav Item - Medicinas -->
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'medicamentos' %}">
+                <a class="nav-link" href="{% url 'medicamentos:medicamentos' %}">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Medicinas</span></a>
             </li>
@@ -79,7 +79,7 @@
                   <span>Clientes</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'laboratorios' %}">
+            <a class="nav-link" href="{% url 'laboratorios:laboratorios' %}">
                 <i class="fas fa-fw fa-table"></i>
                 <span>Laboratorios</span></a>
         </li>
@@ -88,16 +88,12 @@
               <i class="fas fa-fw fa-table"></i>
               <span>Distribuidores</span></a>
       </li>
-        <li class="nav-item">
-        <a class="nav-link" href="{% url 'compras' %}">
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'compras' %}">
           <i class="fas fa-fw fa-table"></i>
           <span>Compras</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{% url 'pedidos' %}">
-                <i class="fas fa-fw fa-table"></i>
-                <span>Pedido</span></a>
-        </li>
+  </li>
+        
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -329,23 +325,14 @@
                         <h1 class="h3 mb-0 text-gray-800">{%  block cabecera %} {% endblock %} </h1>
                         
 
-                        
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
                     {%  block pie %} {% endblock %}
             
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; FARMAPRO 2021</span>
-                    </div>
-                </div>
-            </footer>
+            
             <!-- End of Footer -->
 
         </div>
+        
         <!-- End of Content Wrapper -->
 
     </div>
