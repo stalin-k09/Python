@@ -1,0 +1,45 @@
+<!--Heredar de plantilla Base-->
+{% extends 'core/base.html' %}
+
+<!--Llenar el bloque cabecera-->
+{% block cabecera %}
+Salidas
+{% endblock %}
+
+<!--Llenar el bloque pie-->
+{% block pie %}
+{% include 'salidas/salida_menu.html'%}
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary">Salidas Registradas</h6>
+  </div>
+      <div class="table-responsive">
+        
+<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+<thead>
+    <tr>
+      <th scope="col">Medicamento</th>
+      <th scope="col">Cliente</th>
+      <th scope="col">Cantidad</th>
+      <th scope="col">Acciones</th>
+    </tr>
+  </thead> 
+  
+    <tbody>
+      {% for salida in object_list %}
+    <tr>
+      <td>{{salida.medicamento}}</td>
+      <td>{{salida.cliente}}</td>
+      <td>{{salida.cantidad_venta}}</td>
+        <td>
+          <a href="{% url 'salidas:update' salida.id %}" class="btn btn-sm btn-primary">Editar</a>
+          <a href="{% url 'salidas:delete' salida.id %}" class="btn btn-secondary btn-sm">Borrar</a>
+        </td>
+    </tr>
+    {% endfor %}
+    
+    </tbody>
+    
+</table>
+
+{% endblock %}
