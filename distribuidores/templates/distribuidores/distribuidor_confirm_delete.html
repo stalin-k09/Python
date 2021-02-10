@@ -17,9 +17,6 @@
             {% csrf_token %}
             <p>¿Estás seguro de que quieres borrar "{{ object }}"?</p>
             <input type="submit" value="Borrar Registro" class="btn-sm btn-danger"/>
-            <a href="{% url 'distribuidores:distribuidores' %}"class="btn btn-secondary">
-              Cancelar
-              </a>
           </form>
         </div>
       </div>
