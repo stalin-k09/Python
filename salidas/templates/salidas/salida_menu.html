@@ -1,0 +1,12 @@
+<div class="btn-group dropright mb-4">
+    <button class="btn btn-secondary dropdown-toggle" type="button"
+        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">
+        Administrar
+    </button>
+    <div class="dropdown-menu animated--fade-in"
+        aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="{% url 'salidas:create' %}">Registro de Salida</a>
+        <a class="dropdown-item" href="{% url 'salidas:salidas' %}">Visualizar Registros</a>
+    </div>
+</div>

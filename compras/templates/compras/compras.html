@@ -1,0 +1,38 @@
+<!--Heredar de plantilla Base-->
+{% extends 'core/base.html' %}
+
+<!--Llenar el bloque cabecera-->
+{% block cabecera %}
+COMPRAS
+{% endblock %}
+
+<!--Llenar el bloque pie-->
+{% block pie %}
+<table class="table table-hover">
+<thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Cantidad</th>
+      <th scope="col">Medicamento</th>
+      <th scope="col">Laboratorio</th>
+      <th scope="col">Distribuidor</th>
+    </tr>
+  </thead> 
+
+ 
+  
+    <tbody>
+        {% for compra in compras %}
+    <tr>
+        <th scope="row">#</th>
+        <td>{{compra.cantidad_compra}}</td>
+        <td>{{compra.nombre_medicamento}}</td>
+        <td>{{compra.nombre_laboratorio}}</td>
+        <td>{{compra.nombre_distribuidor}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+    
+
+{% endblock %}
